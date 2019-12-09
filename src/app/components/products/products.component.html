@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-4">
+      <h1 class="text-center">
+        Best Shoes
+      </h1>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-3 mt-5" *ngFor="let p of data.products">
+      <a [routerLink]="'/products/' + p._id">
+        <img class="img-fluid" [src]="p.photo"/>
+        <div class="text-center">
+          <h3 class="title">
+            {{ p.title }}
+          </h3>
+        </div>
+      </a>
+      <div class="text-right">
+        <h3>
+          {{ p.price }}€
+        </h3>
+      </div>
+      <div>
+        <button type="button" class="btn btn-danger btn-block ">BUY NOW
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
